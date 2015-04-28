@@ -17,6 +17,6 @@ Solution contains of 3 projects:
     Testing.
 
 note:
-FlexiCaptureProcessorsPool.cs
+FlexiCaptureProcessorsPool.cs, 
 Config.cs
-missed here because of Privacy Policy of the Company
+are missed here because of Privacy Policy of the Company
