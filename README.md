@@ -15,3 +15,8 @@ Solution contains of 3 projects:
  
 3. **FCUnitTest:**<br>
     Testing.
+
+note:
+FlexiCaptureProcessorsPool.cs
+Config.cs
+missed here because of Privacy Policy of the Company
