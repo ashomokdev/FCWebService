@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://abbyy/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://abbyy/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://abbyy/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetResultFromImages">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="documentDifinition" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="images" type="tns:ArrayOfBase64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBase64Binary">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="base64Binary" nillable="true" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetResultFromImagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResultFromImagesResult" type="tns:ArrayOfPersonData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPersonData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PersonData" nillable="true" type="tns:PersonData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PersonData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="processInfo" type="tns:ProcessInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="tns:ArrayOfChar" />
+          <s:element minOccurs="0" maxOccurs="1" name="Date" type="tns:ArrayOfChar" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProcessInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="processNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="freeProcCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestGUID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfChar">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="char" type="s1:char" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetResultFromImagesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResultFromImages" />
+  </wsdl:message>
+  <wsdl:message name="GetResultFromImagesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResultFromImagesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="GetResultFromImages">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Uploading images and Document difinition .xml file.</wsdl:documentation>
+      <wsdl:input message="tns:GetResultFromImagesSoapIn" />
+      <wsdl:output message="tns:GetResultFromImagesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetResultFromImages">
+      <soap:operation soapAction="http://abbyy/GetResultFromImages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetResultFromImages">
+      <soap12:operation soapAction="http://abbyy/GetResultFromImages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://localhost:56405/WebServiceFC.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://localhost:56405/WebServiceFC.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

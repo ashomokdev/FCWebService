@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlexiCaptureWebService", "FCWebService\FlexiCaptureWebService.csproj", "{6A2EC08E-35F7-473C-80FD-5137CA125D4C}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSite", "http://localhost:63137", "{DCE94AF5-A8A1-4D20-B859-F282BF85423F}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_63137"
+		Debug.AspNetCompiler.PhysicalPath = "WebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63137\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_63137"
+		Release.AspNetCompiler.PhysicalPath = "WebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63137\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "WebSite\"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{6A2EC08E-35F7-473C-80FD-5137CA125D4C} = {6A2EC08E-35F7-473C-80FD-5137CA125D4C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCUnitTest", "FCUnitTest\FCUnitTest.csproj", "{BF69A5DC-AD5A-4131-9435-6425454CD131}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6A2EC08E-35F7-473C-80FD-5137CA125D4C} = {6A2EC08E-35F7-473C-80FD-5137CA125D4C}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A2EC08E-35F7-473C-80FD-5137CA125D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A2EC08E-35F7-473C-80FD-5137CA125D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A2EC08E-35F7-473C-80FD-5137CA125D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A2EC08E-35F7-473C-80FD-5137CA125D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE94AF5-A8A1-4D20-B859-F282BF85423F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE94AF5-A8A1-4D20-B859-F282BF85423F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE94AF5-A8A1-4D20-B859-F282BF85423F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE94AF5-A8A1-4D20-B859-F282BF85423F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{BF69A5DC-AD5A-4131-9435-6425454CD131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF69A5DC-AD5A-4131-9435-6425454CD131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF69A5DC-AD5A-4131-9435-6425454CD131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF69A5DC-AD5A-4131-9435-6425454CD131}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

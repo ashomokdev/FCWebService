@@ -1,0 +1,41 @@
+
+Log Entry : 17:05:58 21 октября 2014 г.
+
+Passport: 
+PO509974
+18 OCT 16
+Request GUID:c1e7b295-0c2e-457f-b21c-4c0d40e21127
+Processor number = 0
+Free processors count = 2
+
+Passport: 
+AX248456
+04 APR 13
+Request GUID:c1e7b295-0c2e-457f-b21c-4c0d40e21127
+Processor number = 1
+Free processors count = 2
+
+Passport: 
+PO255808
+21 APR 16
+Request GUID:c1e7b295-0c2e-457f-b21c-4c0d40e21127
+Processor number = 0
+Free processors count = 2
+
+Passport: 
+error   
+error    
+Request GUID:c1e7b295-0c2e-457f-b21c-4c0d40e21127
+Processor number = 2
+Free processors count = 3
+Error : Recognition passport Expiry Date does not pass validation. This text is wrong: ■ 
+
+Passport: 
+error   
+error    
+Request GUID:c1e7b295-0c2e-457f-b21c-4c0d40e21127
+Processor number = 1
+Free processors count = 4
+Error : Recognition passport Expiry Date does not pass validation. This text is wrong: ■ 
+
+-------------------------------

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\inetpub\FCservice</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/FCWebService.dll">
+      <publishTime>10/21/2014 15:30:43</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/02/2014 14:53:42</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/21/2014 15:28:04</publishTime>
+    </File>
+    <File Include="WebServiceFC.asmx">
+      <publishTime>09/02/2014 14:53:42</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
